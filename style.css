@@ -1,0 +1,282 @@
+@font-face {
+    font-family: Circular;
+    src: url(/assets/fonts/lineto-circular-pro-medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Circular;
+    src: url(/assets/fonts/lineto-circular-pro-book.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Circular;
+    src: url(/assets/fonts/lineto-circular-pro-bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: CircularBlack;
+    src: url(/assets/fonts/lineto-circular-black.ttf);
+    font-weight: 800;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: rgb(18, 18, 18);
+}
+
+body {
+    display: flex;
+    margin: 0;
+    height: 100vh;
+    color: white;
+    font-family: Circular, sans-serif;
+}
+
+button {
+    font-family: Circular, sans-serif;
+    cursor: pointer;
+}
+
+#sidebar {
+    width: 15%;
+    min-width: 200px;
+    height: 100%;
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    color: #eaeaeab6;
+}
+
+#sidebar ion-icon {
+    font-size: 1.35em;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+#sidebar img {
+    margin: 1em auto 1em 1em;
+    width: 60%;
+}
+
+#sidebar ul {
+    margin: 1em 0px;
+    padding: 0;
+}
+
+#sidebar li {
+    width: calc(100% - 1em);
+    padding: 0.5em 0.5em;
+    margin: 0.3em 0.5em;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.4s linear;
+    outline: none;
+}
+
+#sidebar li:hover,
+#sidebar li:focus {
+    color: white;
+}
+
+#sidebar li:focus {
+    background-color: #353535;
+}
+
+#sidebar li span {
+    margin-left: 10px;
+}
+
+#main {
+    position: relative;
+    width: 100%;
+}
+
+#navbar {
+    position: absolute;
+    min-height: 50px;
+    min-width: 100%;
+    top: 0px;
+    right: 0px;
+    background-color: #0a0a0a;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+#navbar .arrows {
+    margin-left: 0.5em;
+    opacity: 0.5;
+}
+
+#navbar .arrows > * {
+    font-size: 1.3em;
+    margin: 0.5em 0.7em;
+}
+
+#search-wrapper input[type="search"] {
+    border-radius: 100px;
+    margin: auto;
+    padding-right: 1em;
+    line-height: 24px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-family: Circular;
+}
+
+.cancel-icon {
+    display: none;
+}
+
+#search-wrapper input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+}
+#search-wrapper input[type="search"]:not(:placeholder-shown) + .cancel-icon {
+    display: block;
+}
+
+#search-wrapper {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+}
+
+#search-wrapper ion-icon {
+    color: black;
+    margin: 0.5em;
+}
+
+#content {
+    padding: 10% 5%;
+    max-height: 100vh;
+    overflow: scroll;
+}
+
+#content h2 {
+    padding: 0px 16px;
+}
+
+.content-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: 50% 0%;
+}
+
+.card:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.card:hover .play-btn {
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+.card-body h4 {
+    margin: 0.75em 0px;
+}
+.card-body span {
+    font-size: 0.7em;
+}
+
+.card-media {
+    position: relative;
+}
+
+.play-btn {
+    background-color: rgb(34, 150, 34);
+    padding: 0.8em;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+    opacity: 0;
+    transform: translateY(7.5%);
+    transition: all 0.2s ease-in-out;
+}
+
+.play-btn ion-icon {
+    font-size: 0.9em;
+}
+
+#footer {
+    background: linear-gradient(90deg, #af2896, #509bf5);
+    min-height: 85px;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    padding: 11px 24px 7px 15px;
+    display: flex;
+}
+
+#footer .preview-title {
+    /* font-family: 'Segoe UI', Helvetica, Tahoma, Geneva, Verdana, sans-serif; */
+    text-transform: uppercase;
+    font-weight: 200;
+    letter-spacing: 2px;
+    font-size: 0.75em;
+}
+
+#footer > div:last-of-type {
+    margin-left: auto;
+    display: flex;
+}
+
+.spoty-btn {
+    background-color: white;
+    color: #2e77d0;
+    border: none;
+    margin: auto;
+    padding: 1em 4.5em;
+    text-transform: uppercase;
+    letter-spacing: 1.7px;
+    border-radius: 100px;
+    font-weight: 700;
+}
+
+.sign-in-wrapper {
+    width: 30%;
+    margin-left: auto;
+    margin-right: 2em;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+}
+
+.sign-in-wrapper button {
+    padding: 0.7em 3em;
+    font-size: 0.7em;
+    margin: 0px;
+}
+
+.sign-up-btn {
+    background-color: transparent;
+    color: white;
+    font-weight: 400;
+}
+
+.login-btn {
+    color: black;
+}
